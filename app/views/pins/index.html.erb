@@ -2,10 +2,11 @@
 
 <h1>Pins</h1>
 
-<%= form_tag(pins_path, method: :get) do %>
-  <%= text_field_tag :title, params[:title], autocomplete: 'off', placeholder: "image title" %>
-  <%= submit_tag "Search" %>
-<% end %>
+<%= search_form_for @q do |f| %>
+
+  <%= f.label :title_cont %>
+  <%= f.search_field :title_cont %>
+  <% end %>
 
 <table>
   <thead>

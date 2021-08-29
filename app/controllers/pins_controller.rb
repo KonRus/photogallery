@@ -3,12 +3,8 @@ class PinsController < ApplicationController
 
   # GET /pins or /pins.json
   def index
-    @pins = Pin.all
-    if params[:title]
-      @pins = Pin.where('title LIKE ?', "%#{params[:title]}%") #case-insensitive
-    else
-      @pins = Pin.all
-    end
+    @q = Pin.ransack(params[:q])
+    @pins = @q.result
   end
 
   # GET /pins/1 or /pins/1.json
