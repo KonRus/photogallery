@@ -11,22 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
   <%= form.label :image %>
-  <%= form.file_field :image %>
+  <%= form.file_field :image, class: "form-control-file"%>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :caption %>
-    <%= form.text_area :caption %>
+    <%= form.text_area :caption, class: "form-control"%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "zakoncz", class:"btn btn-primary", style: "margin:1%"%>
   </div>
+ 
 <% end %>

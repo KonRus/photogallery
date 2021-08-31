@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap/scss/bootstrap";
+
+ table {
+    width: 100%;
+  }
+  
+  .orbit-container .orbit-slides-container img {
+    width: 100%;
+  }
+  card {
+    height: 100%;
+  }
+  /*.figure:hover{
+    
+    transform:scale(1.5);
+  }*/

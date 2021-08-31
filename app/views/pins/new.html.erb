@@ -1,5 +1,15 @@
-<h1>New Pin</h1>
+<header>
 
-<%= render 'form', pin: @pin %>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="/" class="navbar-brand d-flex align-items-center">
+        <strong>Galeria</strong>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <%= render 'form', pin: @pin %>
+  <%= link_to 'Powrót do storny głównej', pins_path, :class => "btn btn-primary btn-sm" %>
+</div>
 
-<%= link_to 'Back', pins_path %>

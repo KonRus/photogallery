@@ -1,6 +1,19 @@
-<h1>Editing Pin</h1>
+<header>
 
-<%= render 'form', pin: @pin %>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="/" class="navbar-brand d-flex align-items-center">
+        <strong>Galeria</strong>
+      </a>
+    </div>
+  </div>
+</header>
+<body>
+    <h1 class="h3 mb-3 py-5 font-weight-normal text-center">Edycja pliku</h1>
+    <div class="container">
+        <%= render 'form', pin: @pin %>
 
-<%= link_to 'Show', @pin %> |
-<%= link_to 'Back', pins_path %>
+      
+        <%= link_to 'Powrót do storny głównej', pins_path, :class => "btn btn-primary btn-sm" %> 
+    </div>
+</body>

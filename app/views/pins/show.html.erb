@@ -1,16 +1,42 @@
+<header>
+
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="/" class="navbar-brand d-flex align-items-center">
+        <strong>Galeria</strong>
+      </a>
+      <%= link_to 'Nowy Obraz', new_pin_path, :class => "btn btn-primary btn-sm" %>
+    </div>
+  </div>
+</header>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @pin.title %>
-</p>
 
-<p>
-  <strong>Caption:</strong>
-  <%= @pin.caption %>
-</p>
+  <div class="container-fluid">
+  
+        <%= image_tag(@pin.image, class:"img-fluid") %>
+        </br>
+        <th>Tytuł: </th>
+        <%= @pin.title %>
+        </br>
+        <th>Opis: </th>
+        <%= @pin.caption %>
+          </br>
+       
+            
+            <%= link_to 'Powrót do storny głównej', pins_path, :class => "btn btn-primary btn-sm" %>
+      </div>
+  </div>
 
-<%= image_tag(@pin.image, style:'width:400px; height:auto') %>
+    
+  
+  
+   
 
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
-<%= link_to 'Back', pins_path %>
+
+
+
+
+
+
